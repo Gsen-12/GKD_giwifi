@@ -1,20 +1,5 @@
 # 📘 GiWiFi 校园网自动登录脚本
 
-一个兼容 BusyBox / OpenWrt / Linux 的纯 Shell 自动登录脚本，支持加密认证、设备自动绑定、错误重试等功能。
-
----
-
-## ✨ 功能特点
-
-* ✅ 自动提取登录页参数（iv、sign、pid、vlan）
-* 🔐 本地 AES-128-CBC 加密登录请求
-* 🔁 支持设备自动绑定与重试逻辑（`isRebind`、`reBind`）
-* 🧩 纯 Shell 实现，无 Python、Node 依赖
-* 🧱 完全兼容 OpenWrt / BusyBox 环境
-* 📜 详细日志输出，可用于调试
-
----
-
 ## 🧰 环境依赖
 
 在使用前，请确保系统已安装以下命令：
@@ -38,7 +23,7 @@ opkg install curl openssl-util xxd
 
 ## 🚀 使用方法
 
-将脚本放入 `/etc/giwifi-lan.sh`，并赋予可执行权限：
+将脚本放入 `/etc/giwifi.sh`，并赋予可执行权限：
 
 ```bash
 chmod +x /etc/giwifi-lan.sh
@@ -53,7 +38,7 @@ chmod +x /etc/giwifi-lan.sh
 示例：
 
 ```bash
-/etc/giwifi-lan.sh 19120486918 mypassword 192.168.99.2(GKD网关)
+/etc/giwifi-lan.sh 19120486918 mypassword 192.168.99.2
 ```
 
 ### 🧠 参数说明
