@@ -38,7 +38,7 @@ chmod +x /etc/giwifi-lan.sh
 示例：
 
 ```bash
-/etc/giwifi-lan.sh 19120486918 mypassword 192.168.99.2
+/etc/giwifi-lan.sh 17653846573 mypassword 192.168.99.2
 ```
 
 ### 🧠 参数说明
