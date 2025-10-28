@@ -1,4 +1,4 @@
-# 📘 GiWiFi 校园网自动登录脚本
+# 使用前要做的准备
 
 ## 🧰 环境依赖
 
@@ -19,7 +19,13 @@ opkg update
 opkg install curl openssl-util xxd
 ```
 
----
+### 进入：服务-终端
+
+```bash
+curl -v www.baidu.com
+```
+
+找到
 
 ## 🚀 使用方法
 
@@ -105,37 +111,3 @@ sh -x /etc/giwifi-lan.sh <账号> <密码> <网关IP>
 ### ❓ resultCode=2（设备已绑定）
 
 * 脚本已内置自动解绑逻辑（`isRebind`、`reBind`），等待数秒后会自动重新绑定。
-
-### ❓ OpenSSL 报错
-
-* 检查 OpenSSL 是否支持 `enc` 模块。
-* 可运行 `openssl enc -h` 查看支持的算法。
-
----
-
-## 🪶 文件结构
-
-```
-/etc/
- ├── giwifi-lan.sh         # 主登录脚本
- ├── giwifi_last_resp.json # 最近一次返回数据
- └── login.html            # 登录页缓存
-```
-
----
-
-## 🧾 版权与许可
-
-MIT License  © 2025  <Your Name>
-
-可自由修改与分发，但请保留作者与来源说明。
-
----
-
-## 🌐 项目地址（示例）
-
-GitHub: [https://github.com/yourname/giwifi-lan-login](https://github.com/yourname/giwifi-lan-login)
-
----
-
-> 💡 建议：若校园网认证逻辑有变化，可使用浏览器抓包工具重新确认前端请求参数结构（iv / sign / AES key 方式）。
